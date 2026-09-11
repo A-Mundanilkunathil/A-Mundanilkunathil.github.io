@@ -1,99 +1,64 @@
 ---
 layout: essay
 type: essay
-title: "Smart Questions, Good Answers"
-# All dates must be YYYY-MM-DD format!
-date: 2015-09-08
+title: "Good Answers Are Cheap. Good Questions Are Not."
+image: ../img/smart-questions/rtfm.png
+date: 2026-09-10
 published: true
 labels:
-  - Questions
-  - Answers
+  - Software Engineering
   - StackOverflow
+  - Communication
 ---
 
 <img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
 
-## Is there such thing as a stupid question?
+## Everyone can get answers now
 
-I’ve had instructors address a whole class and say, “There’s no such thing as a stupid question.” I now know that is in fact not true because I’ve challenged the statement and received the appropriate dumb-stricken, annoyed look. There are definitely stupid questions, and along with that, usually unhelpful answers. Though we all might be guilty of being callous and making people victim to our poorly formed questions, there are steps we can take to ask smarter questions that hopefully don’t illicit the dreaded “rtfm” or “stfw” response.
+Almost any factual question can be answered in seconds now. If I want to know what a rest parameter does or why my for loop is off by one, I can ask an AI model or just Google it and be done. Because of that, there are very few questions left that you truly cannot answer on your own. So when everyone is able to get quick answers, the real difference between people becomes the kind of questions they ask. If we can all get answers, the question is whether you are asking good ones.
 
-## What’s a smart question?
+Eric Raymond's essay [How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html) was written way before AI assistants existed, but the core idea still holds up: the people (and now the machines) most able to help you will help you best when you do your homework first, give context, get specific, and make the question easy to act on. In this essay I look at one real StackOverflow question that gets this right, one made up question that gets it wrong, and what I learned about asking questions this semester.
 
-Stack Overflow, a question and answer site for programmers, is a great resource for anyone who may have issues with code or who may simply want to learn new or different methods of doing something. There I found examples of good questions and bad questions, which could probably be improved.
+## A smart question: two million people had the same one
 
-In the following example, we examine the components of a decent question. In this case, the asker is trying to figure out a way to get the date of the previous month in Python.
+The question [Why is processing a sorted array faster than processing an unsorted array?](https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array) was asked by user GManNickG in June 2012. It is the most upvoted question in StackOverflow history, with over 27,000 upvotes and close to two million views.
 
-```
-Q: python date of the previous month
+The asker noticed something weird: a loop over an array ran about six times faster when the array was sorted first, even though sorting should not change the amount of work being done. Instead of posting "my code is slow, why?", he posted a short, complete, runnable C++ program, the actual timing numbers he measured (11.54 seconds unsorted versus 1.93 seconds sorted), and proof that he had already dug into it himself: he ported the same test to Java and got the same behavior, which ruled out a compiler quirk. The title states the exact thing he observed. There is nothing vague to interpret and nothing missing if you want to reproduce it.
 
-I am trying to get the date of the previous month with python. Here is what i've tried:
+That is basically Raymond's checklist in one post: a precise subject line, a minimal reproducible example, evidence of prior effort, and a question with one concrete, answerable core. The response shows what that buys you. User Mysticial wrote an answer, now sitting at over 35,000 upvotes, explaining CPU branch prediction with a now famous analogy about a railroad junction operator guessing which way to flip the switch. The page became a canonical reference that the community still points people to today. One well built question turned into a resource that taught low level CPU behavior to two million readers. That is what a good question can buy.
 
-str( time.strftime('%Y') ) + str( int(time.strftime('%m'))-1 )
+## A not so smart question
 
-However, this way is bad for 2 reasons: First it returns 20122 for the February of 2012 (instead of 201202) 
-and secondly it will return 0 instead of 12 on January.
+For contrast, here is a question written the not smart way. As the assignment suggests, this example was AI generated instead of pulled from StackOverflow, since the community there closes or deletes questions like this pretty fast:
 
-I have solved this trouble in bash with:
+> **Title: URGENT!!! my code doesnt work please help ASAP**
+>
+> I am building a website and the javascript is broken. Nothing happens when I click the button. I tried everything and nothing works. This is due tomorrow. Can someone fix this for me??? I can send the files to whoever wants to help.
 
-echo $(date -d"3 month ago" "+%G%m%d")
+And the kind of responses it earns:
 
-I think that if bash has a built-in way for this purpose, then python, much more equipped, should provide something 
-better than forcing writing one's own script to achieve this goal. Of course i could do something like:
+> "What does 'doesn't work' mean? What button? Post your code." (then no reply for six hours)
+>
+> "Nobody is going to download your files. Read how to create a minimal reproducible example and edit your question." (question sitting at minus two)
+>
+> Closed: *Needs details or clarity.*
 
-if int(time.strftime('%m')) == 1:
-    return '12'
-else:
-    if int(time.strftime('%m')) < 10:
-        return '0'+str(time.strftime('%m')-1)
-    else:
-        return str(time.strftime('%m') -1)
-        
-I have not tested this code and i don't want to use it anyway (unless I can't find any other way:/)
+The responders are not even being mean here. They are asking for the things the question should have included in the first place. The asker pays for the missing context with a full round trip of waiting, and probably never gets an answer at all. Every precept the sorted array question followed is violated: no specific title, no code, no error message, no sign of effort, and the "URGENT" pressure that Raymond specifically warns against, because your deadline is not a volunteer's problem.
 
-Thanks for your help!
-```
+## Knowing who to ask is part of the skill
 
-While the heading of his question could be better, it does convey what he’s trying to figure out. Usually something as brief as “python date of previous month” is what other users would enter in as search terms on Google, making it easily found. Another good thing about the question is that it’s not just a question. The asker shows what he or she has done and that he or she has put in some effort to answer the question. And while it may not be as important as the question itself, the asker shows courtesy, which does increase the chance of getting an answer.
+Something this exercise made me realize is that a smart question is not just about phrasing. It is also about sending it to the right answerer. This semester I hit an inconsistency between a chart and a table in one of our practice WODs. I asked an AI assistant about it first and it struggled, because the important information was inside an image of a chart and the model could not really work with it. My professor answered the same question immediately, because he had context the AI did not have.
 
-```
-A: datetime and the datetime.timedelta classes are your friend.
+That gave me a rule I use now: ask AI the questions that documentation can answer, and ask humans the questions where the information is stored in somebody's brain. You would not ask an AI what your professor's late policy is. Unless it is written in the syllabus, that knowledge only exists in one place, and the only way to get it is to ask the person, and to ask well. The smartest question in the world sent to the wrong answerer is still a wasted question.
 
-1. find today
-2. use that to find the first day of this month.
-3. use timedelta to backup a single day, to the last day of the previous month.
-4. print the YYYYMM string you're looking for.
+I also see this from the other side when I tutor beginning programmers. The questions that are easy to help with are specific and have a concrete outcome attached, like "will approach A or approach B work better for doing X?" The impossible ones are vague, like "what is the purpose of all of this?" There are so many ways to give something meaning that a vague question forces the helper to answer twenty possible questions and hope one of them was yours.
 
-Like this:
+## Smart questions in the AI era
 
- >>> import datetime
- >>> today = datetime.date.today()
- >>> first = datetime.date(day=1, month=today.month, year=today.year)
- >>> lastMonth = first - datetime.timedelta(days=1)
- >>> print lastMonth.strftime("%Y%m")
- 201202
- >>>
+I do not think AI makes this skill obsolete. My experience says the opposite: prompting well IS asking smart questions, just at higher speed and volume. When I prompt, I try to be straightforward, precise, and not repetitive, and I state boundaries explicitly, meaning what I want, what I do not want, and what form the answer should take. More than anything, my smart questions come down to one thing: have I given all the right context? Once the context is right, every question I ask lives inside that context, and the answers get dramatically better. That is Raymond's advice applied to a machine.
 
-```
- 
-The asker received six possible answers, and he or she was successful in inciting discussion from multiple users. The answers themselves were clear and were devoid of the rumored sarcasm and hostility of “hackers.” Since I myself have referenced this page and found it useful, I can confidently say that it is a good question.
+So the takeaway for me is not "be polite on StackOverflow." It is that asking questions is a real engineering skill with a real payoff. The sorted array question turned one developer's curiosity into a resource for two million people. The lazy question earned a lock and silence. Getting answers has never been easier, which is exactly why the questions are the part worth practicing.
 
-## The foolproof way to get ignored.
+---
 
-While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
-
-```
-Q: Facebook Desktop Notifier
-
-I am a beginner programmer that have never used anything other than what's included in a language.
-
-I am trying to create a desktop application that notifies me anytime I get an update onfacebook. 
-How should go about doing this? Thanks in advance.
-
-edit Sorry I was not clear. Is there any way to make a DESKTOP application with facebook?
-```
-
-A simple “yes” would have answered the question, but we know that’s not the sort of answer he or she is looking for. Fortunately, someone kindly responded with a link to Facebook’s developer website. The asker should have done more research on his or her potential project. Then further down the road, he or she could have asked more specific and detailed questions that wouldn’t require a thousand-paged response for a sufficient answer.
-
-## Conclusion
-
-When we rely on others’ generosity and expertise to provide answers to our questions, it should hold that the question we ask should be one that leads to efficient and effective help that not only benefits us, but also the people we ask and others who might ask the same question in the future. Thus, if you have a question… make it a smart one! Asking questions may not always get you the best answer, but asking them in a way that will make others want to answer them will increase the success of finding a good solution and make it a positive experience on all sides.
+*AI disclosure: I used Claude (Anthropic) to support this essay. I dictated my answers to a set of interview questions about my experiences and opinions, and the AI transcribed and organized my points into essay structure and cleaned up grammar. The "not so smart" question example was AI generated, as the assignment suggests. The experiences, opinions, and conclusions are my own.*
