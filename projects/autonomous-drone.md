@@ -4,7 +4,7 @@ type: project
 image: img/drone/drone-square.jpg
 title: "Autonomous Drone System"
 date: 2025
-published: false
+published: true
 labels:
   - Embedded Systems
   - C/C++
