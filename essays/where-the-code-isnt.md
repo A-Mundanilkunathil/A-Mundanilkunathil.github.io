@@ -2,6 +2,7 @@
 layout: essay
 type: essay
 title: "The Code Is the Easy Part"
+image: ../img/where-the-code-isnt/robot-on-site.png
 date: 2026-09-17
 published: true
 labels:
@@ -9,6 +10,8 @@ labels:
   - Robotics
   - Career
 ---
+
+<img class="img-fluid rounded pb-3" src="../img/where-the-code-isnt/robot-on-site.png" alt="A robot with a laptop on a construction site next to a farm">
 
 ## An honest answer
 
@@ -30,4 +33,4 @@ The experience I really want before I graduate in May 2027 is working on an end 
 
 ## How AI was used for this essay
 
-This essay was written from answers I voice typed to interview questions about my interests and goals. I used Claude to organize my own spoken sentences into sections and clean up grammar and transcription errors. The ideas, opinions, and examples are mine from those answers.
+This essay was written from answers I voice typed to interview questions about my interests and goals. I used Claude to organize my own spoken sentences into sections and clean up grammar and transcription errors. The ideas, opinions, and examples are mine from those answers. The header image is AI generated.
