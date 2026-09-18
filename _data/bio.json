@@ -2,11 +2,11 @@
   "basics": {
     "name": "Aaron Mundanilkunathil",
     "label": "Computer Science Student",
-    "picture": "https://github.com/A-Mundanilkunathil.png",
-    "email": "automatolabs@gmail.com",
+    "picture": "img/aaron-home.png",
+    "email": "aaron.mundanilkunathil@gmail.com",
     "phone": "",
     "website": "https://a-mundanilkunathil.github.io",
-    "summary": "I am studying for a B.S. in Computer Science at San Jose State University, currently attending the University of Hawaii at Manoa for Fall 2026 through the National Student Exchange. I am interested in robotics and software engineering.",
+    "summary": "I am studying for a B.S. in Computer Science at San Jose State University and I expect to graduate in May 2027. This fall I am attending the University of Hawaii at Manoa through the National Student Exchange, where I am taking ICS 313 and ICS 314. Most of my projects sit where software meets hardware, from a humanoid robot at a hackathon to a construction robot I am building in my garage, and after graduation I want to work on robotics software professionally.",
     "location": {
       "address": "",
       "postalCode": "96822",
@@ -19,6 +19,11 @@
         "network": "github",
         "username": "A-Mundanilkunathil",
         "url": "https://github.com/A-Mundanilkunathil"
+      },
+      {
+        "network": "linkedin",
+        "username": "aaron-mundanilkunathil",
+        "url": "https://linkedin.com/in/aaron-mundanilkunathil"
       }
     ]
   },
@@ -31,39 +36,56 @@
     },
     {
       "name": "Autonomous Systems"
+    },
+    {
+      "name": "Machine Learning"
+    },
+    {
+      "name": "3D Printing"
     }
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
+      "name": "Languages",
       "keywords": [
-        "TypeScript",
-        "JavaScript",
         "Python",
+        "C",
         "C++",
-        "Java"
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "C#",
+        "Assembly"
       ]
     },
     {
-      "name": "Toolsets/OS",
+      "name": "ML and Robotics",
       "keywords": [
-        "MacOS",
-        "Ubuntu",
-        "Git/GitHub",
-        "ROS",
-        "Raspberry Pi"
+        "PyTorch",
+        "NVIDIA Isaac Lab",
+        "LeRobot",
+        "TensorFlow",
+        "OpenCV",
+        "MediaPipe",
+        "Pinocchio",
+        "ROS2",
+        "Arduino"
+      ]
+    },
+    {
+      "name": "Systems and Platforms",
+      "keywords": [
+        "Linux",
+        "NVIDIA Jetson",
+        "Raspberry Pi",
+        "ESP32 and embedded systems",
+        "Docker",
+        "CMake",
+        "Git/GitHub"
       ]
     }
   ],
   "education": [
-    {
-      "institution": "San Jose State University, San Jose, CA",
-      "area": "Computer Science",
-      "studyType": "B.S.",
-      "startDate": "2023-08-01",
-      "endDate": "present",
-      "courses": []
-    },
     {
       "institution": "University of Hawaii at Manoa, Honolulu, HI",
       "area": "National Student Exchange, Fall 2026",
@@ -73,6 +95,20 @@
       "courses": [
         "ICS 313",
         "ICS 314"
+      ]
+    },
+    {
+      "institution": "San Jose State University, San Jose, CA",
+      "area": "Computer Science (GPA 3.9)",
+      "studyType": "B.S.",
+      "startDate": "2023-08-01",
+      "endDate": "2027-05-01 (expected)",
+      "courses": [
+        "Data Structures and Algorithms",
+        "Machine Learning",
+        "Computer Systems",
+        "Linear Algebra",
+        "Discrete Math"
       ]
     }
   ],
@@ -85,9 +121,81 @@
       "endDate": "present",
       "summary": "Tutoring beginning programmers in JavaScript fundamentals.",
       "highlights": []
+    },
+    {
+      "company": "Kidokinetics",
+      "position": "Software Developer Intern",
+      "website": "",
+      "startDate": "2025-02-01",
+      "endDate": "present",
+      "summary": "Building AI driven automation for a youth sports company.",
+      "highlights": [
+        "Built AI driven automation systems with LangChain, Python, and TypeScript, reducing onboarding time from 1.5 hours to 20 minutes",
+        "Designed geospatial optimization tools using Google Maps APIs and satellite data, cutting route time by 30 percent",
+        "Developed automated outreach and onboarding pipelines, accelerating school launches"
+      ]
+    },
+    {
+      "company": "PwC - Netrovert Software Limited",
+      "position": "Software Engineering Intern",
+      "website": "",
+      "startDate": "2021-07-01",
+      "endDate": "2022-04-01",
+      "summary": "Backend development and cloud data pipelines.",
+      "highlights": [
+        "Developed backend services in Python and Django, improving system performance by 20 percent",
+        "Implemented Google Cloud Enterprise solutions for large scale data pipelines and helped build an automated day trading platform, improving trading accuracy from 34 percent to 56 percent"
+      ]
     }
   ],
-  "volunteer": [],
-  "awards": [],
+  "volunteer": [
+    {
+      "organization": "Open Source: Excalidraw",
+      "position": "Contributor",
+      "website": "https://github.com/excalidraw/excalidraw/pull/9914",
+      "startDate": "2025-07-01",
+      "endDate": "2025-08-01",
+      "summary": "Fixed the bound text rotation algorithm in Excalidraw, a React canvas app with an 89K+ star repository (merged PR #9914).",
+      "highlights": []
+    },
+    {
+      "organization": "Open Source: zigpy",
+      "position": "Contributor",
+      "website": "https://github.com/A-Mundanilkunathil/zigpy",
+      "startDate": "2025-06-01",
+      "endDate": "2025-08-01",
+      "summary": "Architected a callback based packet reception system for Zigbee networks with a full unit test suite.",
+      "highlights": []
+    },
+    {
+      "organization": "Open Source: Storybook",
+      "position": "Contributor",
+      "website": "https://github.com/storybookjs/storybook/pull/30639",
+      "startDate": "2025-01-01",
+      "endDate": "2025-03-01",
+      "summary": "Fixed inaccurate test coverage reporting by updating the Vitest configuration to exclude non source files (PR #30639).",
+      "highlights": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "1st Place, Cal Hacks 12.0",
+      "date": "2025",
+      "awarder": "Cal Hacks (UC Berkeley)",
+      "summary": "Won first place out of 2,000+ participants with MIRAI, a vision language action stack on a Unitree G1 humanoid robot."
+    },
+    {
+      "title": "Associate Cloud Engineer Certification",
+      "date": "",
+      "awarder": "Google Cloud",
+      "summary": "Google Cloud certified Associate Cloud Engineer."
+    },
+    {
+      "title": "Silicon Valley Innovation Challenge Finalist",
+      "date": "",
+      "awarder": "San Jose State University",
+      "summary": "Finalist with Motion AI, a real time motion analysis system."
+    }
+  ],
   "references": []
 }
