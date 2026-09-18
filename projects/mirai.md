@@ -4,7 +4,7 @@ type: project
 image: img/mirai/mirai-square.jpg
 title: "MIRAI"
 date: 2025
-published: false
+published: true
 labels:
   - Robotics
   - Python
