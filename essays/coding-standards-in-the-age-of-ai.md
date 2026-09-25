@@ -50,6 +50,6 @@ I will also say the startup side out loud: coding standards are very hard to ado
 
 Honest answer: no. On my own next project I will not be installing ESLint on day one, because for me it is annoying and a waste of time I would rather spend building. What I will do instead is tell my large language model that these are the coding standards in place for this project and this organization, and let the code come out conforming from the start. Right now I use ESLint because my assignments force me to. That is the truthful state of things, and I think it points at where this is all heading: the standard stops being a gate you pass at the end and becomes part of the instructions you give at the beginning.
 
-## How AI was used for this essay
+## AI note
 
-This essay was written from answers I voice typed to interview questions about the module. I used Claude to organize my own spoken sentences into sections and clean up grammar and transcription errors. The opinions, experiences, and examples are mine from those answers. The header image is AI generated.
+The opinions and experiences here are mine, voice typed as answers to interview questions. Claude organized my sentences into sections and cleaned up grammar and transcription errors, and the header image is AI generated.
