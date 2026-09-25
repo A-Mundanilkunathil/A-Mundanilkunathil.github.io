@@ -19,7 +19,7 @@ My professor believes that "if you can only implement one software engineering t
 
 ## A week of squiggly lines
 
-My honest first week with ESLint: it was irritating. I did not understand why we have to deal with such stupid trivialities, single quotes versus double quotes, a missing newline at the end of a file. And I think I know why it felt that way. I have become used to using AI for coding, and I have basically never had to deal with linting issues. During the assignments I tried it both ways, writing code with AI and without it, and the AI version came out with no linting issues to fix. The linter had nothing to say. For the world before large language models, I totally understand why this mattered so much. If every character was typed by a human, you needed a tool nagging every human toward the same style. But when the code is generated already conforming, enforcement is no longer the hard part.
+My honest first week with ESLint: it was irritating. I did not understand why we have to deal with such small trivialities, single quotes versus double quotes, a missing newline at the end of a file. And I think I know why it felt that way. I have become used to using AI for coding, and I have basically never had to deal with linting issues. During the assignments I tried it both ways, writing code with AI and without it, and the AI version came out with no linting issues to fix. The linter had nothing to say. For the world before large language models, I totally understand why this mattered so much. If every character was typed by a human, you needed a tool nagging every human toward the same style. But when the code is generated already conforming, enforcement is no longer the hard part.
 
 ## Where I actually draw the line
 
